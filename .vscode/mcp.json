@@ -1,0 +1,39 @@
+// First Scenario: Local Calculator using STDIO
+{
+    "servers": {
+        "calculator-STDIO": {
+            "command": "C:/MCPServerProject/.venv/Scripts/python.exe",
+            "args": [
+                "C:/MCPServerProject/Scenario 1 - Local_Calculator/fastmcp_calc.py"
+            ]
+            
+        },    
+// Second Scenario: Calculator API via HTTP
+
+        "calculator-HTTP": {
+            "command": "npx",
+            "args": [
+                "mcp-remote", "http://localhost:8001/mcp"
+            ]
+            
+        },
+// Third Scenario: Feed Server via WebSocket
+        "feed-STDIO": {
+            "command": "C:/MCPServerProject/.venv/Scripts/python.exe",
+            "args": [
+                "C:/MCPServerProject/Scenario 3 - Feed Search/feedmcp.py"
+            ]
+            
+        },
+
+// Forth Scenario: Weather App via SSE
+        "weather-SSE": {
+            "command": "C:/MCPServerProject/.venv/Scripts/python.exe",
+            "args": [
+                "C:/MCPServerProject/Scenario 4 - Weather App/weatherApp.py"
+            ]
+            
+        }
+    }
+}         
+        
